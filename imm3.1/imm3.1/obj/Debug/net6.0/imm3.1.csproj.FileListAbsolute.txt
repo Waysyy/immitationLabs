@@ -1,0 +1,15 @@
+A:\GitProjects\DBProject\imm3.1\imm3.1\bin\Debug\net6.0\imm3.1.exe
+A:\GitProjects\DBProject\imm3.1\imm3.1\bin\Debug\net6.0\imm3.1.deps.json
+A:\GitProjects\DBProject\imm3.1\imm3.1\bin\Debug\net6.0\imm3.1.runtimeconfig.json
+A:\GitProjects\DBProject\imm3.1\imm3.1\bin\Debug\net6.0\imm3.1.dll
+A:\GitProjects\DBProject\imm3.1\imm3.1\bin\Debug\net6.0\imm3.1.pdb
+A:\GitProjects\DBProject\imm3.1\imm3.1\obj\Debug\net6.0\imm3.1.csproj.AssemblyReference.cache
+A:\GitProjects\DBProject\imm3.1\imm3.1\obj\Debug\net6.0\imm3.1.GeneratedMSBuildEditorConfig.editorconfig
+A:\GitProjects\DBProject\imm3.1\imm3.1\obj\Debug\net6.0\imm3.1.AssemblyInfoInputs.cache
+A:\GitProjects\DBProject\imm3.1\imm3.1\obj\Debug\net6.0\imm3.1.AssemblyInfo.cs
+A:\GitProjects\DBProject\imm3.1\imm3.1\obj\Debug\net6.0\imm3.1.csproj.CoreCompileInputs.cache
+A:\GitProjects\DBProject\imm3.1\imm3.1\obj\Debug\net6.0\imm3.1.dll
+A:\GitProjects\DBProject\imm3.1\imm3.1\obj\Debug\net6.0\refint\imm3.1.dll
+A:\GitProjects\DBProject\imm3.1\imm3.1\obj\Debug\net6.0\imm3.1.pdb
+A:\GitProjects\DBProject\imm3.1\imm3.1\obj\Debug\net6.0\imm3.1.genruntimeconfig.cache
+A:\GitProjects\DBProject\imm3.1\imm3.1\obj\Debug\net6.0\ref\imm3.1.dll
