@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "A:\\GitProjects\\immitationLabs\\imm3.1\\imm3.1\\imm3.1.csproj": {}
+    "A:\\GitProjects\\immitationLabs\\imm2.2\\imm2.2\\imm2.2.csproj": {}
   },
   "projects": {
-    "A:\\GitProjects\\immitationLabs\\imm3.1\\imm3.1\\imm3.1.csproj": {
+    "A:\\GitProjects\\immitationLabs\\imm2.2\\imm2.2\\imm2.2.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "A:\\GitProjects\\immitationLabs\\imm3.1\\imm3.1\\imm3.1.csproj",
-        "projectName": "imm3.1",
-        "projectPath": "A:\\GitProjects\\immitationLabs\\imm3.1\\imm3.1\\imm3.1.csproj",
+        "projectUniqueName": "A:\\GitProjects\\immitationLabs\\imm2.2\\imm2.2\\imm2.2.csproj",
+        "projectName": "imm2.2",
+        "projectPath": "A:\\GitProjects\\immitationLabs\\imm2.2\\imm2.2\\imm2.2.csproj",
         "packagesPath": "C:\\Users\\ntart\\.nuget\\packages\\",
-        "outputPath": "A:\\GitProjects\\immitationLabs\\imm3.1\\imm3.1\\obj\\",
+        "outputPath": "A:\\GitProjects\\immitationLabs\\imm2.2\\imm2.2\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
