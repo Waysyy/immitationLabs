@@ -1,0 +1,15 @@
+A:\GitProjects\immitationLabs\imm4.1\imm4.1\bin\Debug\net6.0\imm4.1.exe
+A:\GitProjects\immitationLabs\imm4.1\imm4.1\bin\Debug\net6.0\imm4.1.deps.json
+A:\GitProjects\immitationLabs\imm4.1\imm4.1\bin\Debug\net6.0\imm4.1.runtimeconfig.json
+A:\GitProjects\immitationLabs\imm4.1\imm4.1\bin\Debug\net6.0\imm4.1.dll
+A:\GitProjects\immitationLabs\imm4.1\imm4.1\bin\Debug\net6.0\imm4.1.pdb
+A:\GitProjects\immitationLabs\imm4.1\imm4.1\obj\Debug\net6.0\imm4.1.csproj.AssemblyReference.cache
+A:\GitProjects\immitationLabs\imm4.1\imm4.1\obj\Debug\net6.0\imm4.1.GeneratedMSBuildEditorConfig.editorconfig
+A:\GitProjects\immitationLabs\imm4.1\imm4.1\obj\Debug\net6.0\imm4.1.AssemblyInfoInputs.cache
+A:\GitProjects\immitationLabs\imm4.1\imm4.1\obj\Debug\net6.0\imm4.1.AssemblyInfo.cs
+A:\GitProjects\immitationLabs\imm4.1\imm4.1\obj\Debug\net6.0\imm4.1.csproj.CoreCompileInputs.cache
+A:\GitProjects\immitationLabs\imm4.1\imm4.1\obj\Debug\net6.0\imm4.1.dll
+A:\GitProjects\immitationLabs\imm4.1\imm4.1\obj\Debug\net6.0\refint\imm4.1.dll
+A:\GitProjects\immitationLabs\imm4.1\imm4.1\obj\Debug\net6.0\imm4.1.pdb
+A:\GitProjects\immitationLabs\imm4.1\imm4.1\obj\Debug\net6.0\imm4.1.genruntimeconfig.cache
+A:\GitProjects\immitationLabs\imm4.1\imm4.1\obj\Debug\net6.0\ref\imm4.1.dll

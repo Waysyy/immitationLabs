@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Net;
 using System;
 
-Console.WriteLine("Hello, World!");
+
 Random random = new Random();
-double i = 0;
+int i = 0;
 double l = 0.1;
 double re = 2.7;
 double n = 100;
@@ -20,88 +20,133 @@ List<double> lst = new List<double>();
 
 double minlst = 100;
 double maxlst = 0;
-for (int v = 0; v <= 100; ++v)
+for (int v = 0; v <= 99; ++v)
 {
-    double randDigit = random.Next(1, 100);
-    
-    lst.Add((-1 / l) * Math.Log(randDigit));
-    if(minlst < randDigit)
+    double randDigit = random.NextDouble();
+    double addDigit = (-1 / l) * Math.Log((randDigit));
+    lst.Add(addDigit);
+    if(minlst > addDigit)
     {
-        minlst = randDigit;
+        minlst = addDigit;
     }
-    if(maxlst > randDigit)
+    if(maxlst < addDigit)
     {
-        maxlst = randDigit;
+        maxlst = addDigit;
     }
 }
     
 
 
-double h = (maxlst - minlst) / (1 + 3.3221 * Math.Log(n));
+double h = (maxlst - minlst) / (1 + 3.3221 * Math.Log10(n));
 double inter = minlst;
 double crkon = 0;
 double ckx2 = 0;
 double interprav = Math.Round(minlst + h, 2);
-List<double> new_list = new List<double>();
+double new_list = 0;
 //разбиение на интервалы
-new_list.(from x in lst
-            where x <= h
-            select x).ToList().Count;)
-
-print("Интервал: {} - {}".format(0, h));
-print(new_list);
-nvcr = h / 2 * new_list;
-while (interprav < maxlst):
-    inter = interprav + 0.01
-    interprav = h + inter
-    cr = (inter + interprav) / 2
-    print("Интервал: {} - {}".format(round(inter, 2), round(interprav, 2)))
-    n = ((inter <= lst) & (lst <= interprav)).sum()
-    vcr += cr * n
-    print(n)
-    if ((n + cn) < 5) {
-    k += 0
-        cn += n}
-else
+for (int index = 0; index < lst.Count; index++)
 {
-    k += 1;
-    cn = 0;
-    x2 = round((((n + (sum(lst) / 100)) * *2) / (sum(lst) / 100)), 2);
-    x2k += round(x2, 2);
+    if ((lst[index] <= h))
+    {
+        ++new_list;
+    }
 }
-        
-ck = k + 1;
-kcr = round(sum(lst) / 100, 2)
-lpok = round(1 / kcr, 4)
-t = 0
-h1 = 0
-dis = np.var(lst)
 
-while (h1 < maxlst):
-    pi = math.e * *(-lpok * h1) - math.e * *(-lpok * (h1 + h))
-    h1 += h + 0.01
+Console.WriteLine("Интервал: " + 0 +"-"+ h);
+Console.WriteLine(new_list);
+double nvcr = h / 2 * new_list;
+
+List<double> listPi = new List<double>();
+
+
+
+while (interprav < maxlst)
+{
+    n = 0;
+    inter = interprav + 0.01;
+    interprav = h + inter;
+    double cr = (inter + interprav) / 2;
+    Console.WriteLine("Интервал: " + Math.Round(inter, 2) + "-" + Math.Round(interprav, 2));
+    for (int index = 0; index < lst.Count; index++)
+    {
+        if ((inter <= lst[index]) && (lst[index] <= interprav))
+        {
+            ++n;
+            
+        }
+    }
+    vcr += cr * n;
+    Console.WriteLine(n);
+    if ((n + cn) < 5) {
+        k += 0;
+        cn += n;
+    }
+    else
+    {
+        double lstSum = lst.Sum();
+        k += 1;
+        cn = 0;
+        x2 = Math.Pow((n + (lst.Sum() / 100)), 2) / (lst.Sum() / 100);
+        x2k += Math.Round(x2, 2);
+    }
+}
+ck = k + 1;
+double kcr = Math.Round(lst.Sum() / 100, 2);
+double lpok = Math.Round(1 / kcr, 4);
+double t = 0;
+double h1 = 0;
+double e = 2.7182818284590451;
+double pi = 0;
+while (h1 < maxlst)
+{
+    pi = Math.Pow(e, ((-lpok * h1) - Math.Pow(e, (-lpok * (h1 + h)))));
+    h1 += h + 0.01;
     t += 1;
-ni = 100 * pi
-    print("Pi{}: {}  ni: {}".format(t, pi, ni))
-print("Максимальное число:", maxlst)
-print("Минимальное число:", minlst)
-print("Выборочное среднее:", kcr)
-print("Дисперсия:", dis)
-print("Показатель распределения :", lpok)
-print("Длина интервала:", h)
-print("Конечное число распределений, где n>5:", ck)
-stk = ck - 2
-print("Число степеней свободы:", stk)
-tst = [1, 2, 3, 4, 5, 6, 7]
-dis2 = np.var(tst)
-print("Дисперсия2:", dis2)
-if (stk == 7):
-    ckx2 = 18.475
-else:
-    ckx2 = 20.09
-print("Критическая точка x2=", ckx2)
-print("Наблюдаемый x2=", x2k)
-if (x2k < ckx2):
-    print("Результа: нет оснований отвергнуть гипотезу о равномерном распределении генеральной совокупности")
-else:
-    print("Результат: гипотезу отвергают")
+    double ni = 100 * pi;
+    Console.WriteLine("Pi: " + pi + " ni: " + ni + t);
+    listPi.Add(pi);
+}
+//////////////////////////////////////////////////////
+int N;
+double sum = 0, sumd = 0, M, D;
+
+N = 100;
+
+for (i = 0; i < N; i++)
+{
+    sum = sum + lst[i];
+}
+M = sum / N;
+//дисперсия
+for (i = 0; i < N; i++)
+{
+    sumd = sumd + (Math.Round((lst[i] - M),2) * Math.Round((lst[i] - M),2));
+}
+double dis = (sumd / (N - 1));
+
+/////////////////////////////////////////////////////
+
+
+
+
+
+Console.WriteLine("Максимальное число: " + maxlst);
+Console.WriteLine("Минимальное число: " + minlst);
+Console.WriteLine("Выборочное среднее: " + kcr);
+Console.WriteLine("Дисперсия: " + dis);
+Console.WriteLine("Показатель распределения: " + lpok);
+Console.WriteLine("Длина интервала: " + h);
+Console.WriteLine("Конечное число распределений, где n>5: " + ck);
+stk = ck - 2;
+Console.WriteLine("Число степеней свободы: " + stk);
+
+if (stk == 7)
+    ckx2 = 18.475;
+else
+    ckx2 = 20.09;
+Console.WriteLine("Критическая точка x2 = " + ckx2);
+Console.WriteLine("Наблюдаемый x2 = " + x2k);
+if (x2k < ckx2)
+    Console.WriteLine("Результат: нет оснований отвергнуть гипотезу о равномерном распределении генеральной совокупности");
+else
+    Console.WriteLine("Результат: гипотезу отвергают");
