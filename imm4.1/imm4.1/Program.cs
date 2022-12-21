@@ -95,7 +95,7 @@ while (interprav < maxlst)
     }
     double ni = (100 * h) / fu;
     vcr += cr * n;
-    Console.WriteLine(ni);
+    Console.WriteLine("Теоретическая частота "+ ni);
     if ((n + cn) < 5)
     {
         k += 0;

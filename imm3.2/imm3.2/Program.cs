@@ -16,12 +16,20 @@ for (int i = 0; i < 100; i++)
     {
         for (int k = 0; k < 60; k++)
         {
-            call = random.Next(1, 3);
-            allcall += call;
+            double colCall = -call * Math.Log(random.NextDouble());     
+            allcall += colCall;
         }
     }
 }
-double resModel =allcall/(lenghtCall*60*8*100);
+double average = 0.0;
+int n = 60 * 8 * 100;
+double T = 2; 
+for (int i = 0; i < n; i++)
+{
+    double t = -T * Math.Log(random.NextDouble());
+    average += t / n;
+}
+double resModel =allcall/(average * 60*8*100);
 double p00 = 1 / (1 + resModel);
 double p01 = 1 - p00;
 double A1 = (allcall/(60 * 8 * 100)) * p00;
