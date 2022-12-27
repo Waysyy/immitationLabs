@@ -25,16 +25,16 @@ for (int v = 0; v <= 99; ++v)
     double randDigit = random.NextDouble();
     double addDigit = (-1 / l) * Math.Log((randDigit));
     lst.Add(addDigit);
-    if(minlst > addDigit)
+    if (minlst > addDigit)
     {
         minlst = addDigit;
     }
-    if(maxlst < addDigit)
+    if (maxlst < addDigit)
     {
         maxlst = addDigit;
     }
 }
-    
+
 
 
 double h = (maxlst - minlst) / (1 + 3.3221 * Math.Log10(n));
@@ -52,7 +52,7 @@ for (int index = 0; index < lst.Count; index++)
     }
 }
 
-Console.WriteLine("Интервал: " + 0 +"-"+ h);
+Console.WriteLine("Интервал: " + 0 + "-" + h);
 Console.WriteLine(new_list);
 double nvcr = h / 2 * new_list;
 
@@ -72,12 +72,13 @@ while (interprav < maxlst)
         if ((inter <= lst[index]) && (lst[index] <= interprav))
         {
             ++n;
-            
+
         }
     }
     vcr += cr * n;
     Console.WriteLine(n);
-    if ((n + cn) < 5) {
+    if ((n + cn) < 5)
+    {
         k += 0;
         cn += n;
     }
@@ -120,7 +121,7 @@ M = sum / N;
 //дисперсия
 for (i = 0; i < N; i++)
 {
-    sumd = sumd + (Math.Round((lst[i] - M),2) * Math.Round((lst[i] - M),2));
+    sumd = sumd + (Math.Round((lst[i] - M), 2) * Math.Round((lst[i] - M), 2));
 }
 double dis = (sumd / (N - 1));
 
