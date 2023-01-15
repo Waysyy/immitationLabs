@@ -1,39 +1,54 @@
-﻿
-using System.Text.RegularExpressions;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-Random random = new Random();
-double call = 1.2;
-double lenghtCall = 2;
-double p = call/lenghtCall;
-double p0 = 1 / (1 + p);
-double p1 = 1 - p0;
-double A = call * p0; 
+Random rnd = new Random();
 
-double calls = 0;
-double average = 0.0;
-int n = 60 * 8 * 100;
-double T = 2;
+double call_v_min = 1.2; double prodolgit_Call = 2;
+double p = call_v_min / prodolgit_Call;
+double p0 = 1 / (1 + p); //вероятность обслуживания 
+double p1 = 1 - p0; //вероятность отказа 
+double A = call_v_min * p0; //Абсолютная пропускная способность 
+double allCall = 0;
+double kolvo_Call = 0;
 
-//моделирование 
 for (int i = 0; i < 100; i++)
 {
     for (int j = 0; j < 8; j++)
     {
         for (int k = 0; k < 60; k++)
         {
-            double incomingCall = -call * Math.Log(random.NextDouble());    //входящий звонок 
-            calls += incomingCall;
-            double t = -T * Math.Log(random.NextDouble()); //длительность разговора
-            average += t / n;
+            kolvo_Call = (-1 / call_v_min) * Math.Log(rnd.NextDouble());
+            allCall += kolvo_Call;
         }
     }
 }
-double resModel = calls / (average * 60*8*100);
-double p00 = 1 / (1 + resModel);
-double p01 = 1 - p00;
-double A1 = (calls / (60 * 8 * 100)) * p00;
-Console.WriteLine("Теоретические характеристики\n" + "Звонков в минуту: 1.2" + "\nСреднее число звонков:\n" + "Обслуженных: " + 
-    p0*100 +"%"+ "\nНе обслуженных: " + p1 * 100 +"%"+ "\nСредняя пропусная способность СМО: \n" +"Обслуживание звонков в минуту: " + A);
 
-Console.WriteLine("\nРезультаты имитации\n" + "Звонков в минуту: " + Math.Round(calls / (60 * 8 * 100), 2) + "\nСреднее число звонков:\n" + "Обслуженных: " +
-   Math.Round(p00 * 100, 2) + "%" + "\nНе обслуженных: " + Math.Round(p01 * 100, 2) + "%" + "\nСредняя пропусная способность СМО: \n" + "Обслуживание звонков в минуту: " + Math.Round(A1,2));
+double time = 2;
+double avg = 0;
+double n = 10000;
+double t = 0;
+
+for (int i = 0; i < n; i++)
+{
+    t = (-1 / time) * Math.Log(rnd.NextDouble());
+    avg += t / n;
+}
+
+double result = allCall / (avg * 60 * 8 * 100);
+double p00 = 1 / (1 + result);
+double p01 = (1 - p00);
+double A1 = ((allCall / (60 * 8 * 100)) * p00);
+
+Console.WriteLine($"Теоретические значения:");
+Console.WriteLine($"Кол-во звонков в минуту: {call_v_min}");
+Console.WriteLine($"Сч обслуженных звонков: {p0 * 100}");
+Console.WriteLine($"Сч не обслуженных звонков: {p1 * 100}");
+Console.WriteLine($"СМО: {A}");
+Console.WriteLine($"\n");
+Console.WriteLine($"Смоделированные значения:"); Console.WriteLine($"Кол-во звонков в минуту: {allCall / (60 * 8 * 100)}");
+Console.WriteLine($"Сч обслуженных звонков: {p00 * 100}");
+Console.WriteLine($"Сч не обслуженных звонков: {p01 * 100}");
+Console.WriteLine($"СМО: {A1}");
